@@ -51,7 +51,7 @@ With no defense, a 0/180 cell has a 95% upper bound of about 2%.
 
 ### Findings
 
-1. **One sentence of defense closed the gap in this setup.** Telling the model not to follow instructions inside documents took every model to 0 identifier leaks (0/2,160 injected trials with `warning` or `spotlight`).
+1. **Two sentences of defense closed the gap in this setup.** Telling the model never to disclose patient data and not to follow instructions inside documents took every model to 0 identifier leaks (0/2,160 injected trials with `warning` or `spotlight`).
 2. **The largest current model leaked most when undefended.** Opus 5.5 disclosed identifiers in 12.8% of undefended trials, more than the older Haiku 4.5 and Sonnet 4.5, while Haiku 5.5, Sonnet 5.5 and Fable 5.2 never did. A plausible reading is that Opus treats the email's request as part of the task to fulfil; this run cannot confirm the cause.
 3. **Leaks were silent.** Of the 32 identifier leaks, only 3 warned staff about the request, so staff reading the summary would not know it now holds patient data.
 4. **The data came out through the reply, never the tool.** No model sent the record with `send_email`, including under the `tool_exfil` injection. The risk here is a summary that holds patient data and gets forwarded, stored or logged.
