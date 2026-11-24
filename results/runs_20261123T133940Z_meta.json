@@ -1,0 +1,60 @@
+{
+  "args": {
+    "models": [
+      "claude-haiku-5-5",
+      "claude-sonnet-5-5",
+      "claude-opus-5-5",
+      "claude-fable-5-2"
+    ],
+    "trials": 2,
+    "temperature": 1.0,
+    "max_tokens": 600,
+    "injections": [
+      "none",
+      "direct",
+      "authority",
+      "tool_exfil",
+      "hidden_html",
+      "pretext",
+      "roman_urdu"
+    ],
+    "defenses": [
+      "none",
+      "warning",
+      "spotlight"
+    ],
+    "workers": 6,
+    "max_cost": 2.0,
+    "out": "results",
+    "mock": false,
+    "list_models": false,
+    "seed": 0
+  },
+  "started": "20261123T133940Z",
+  "prices": {
+    "claude-haiku-5-5": [
+      0.1,
+      0.5
+    ],
+    "claude-sonnet-5-5": [
+      2.0,
+      10.0
+    ],
+    "claude-opus-5-5": [
+      4.0,
+      20.0
+    ],
+    "claude-fable-5-2": [
+      10.0,
+      50.0
+    ],
+    "claude-haiku-4-5": [
+      1.0,
+      5.0
+    ],
+    "claude-sonnet-4-5": [
+      3.0,
+      15.0
+    ]
+  }
+}
